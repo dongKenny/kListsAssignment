@@ -7,6 +7,7 @@ public class KLists {
         }
 
         //Initialize the result with the first array of outerArray and loop starting with the index (next array) after it
+        //Continually merge the left array (result) with the next array in the outerArray list.
         double[] result = outerArray[0];
         for (int i = 1; i < outerArray.length; i++) {
             result = merge(result, outerArray[i]);
@@ -46,6 +47,7 @@ public class KLists {
         return result;
     }
 
+    //Helper function to make it cleaner to print
     public void arrayOutput(double[] arr) {
         System.out.print("[");
         for (int i = 0; i < arr.length - 1; i++) {
